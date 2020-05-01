@@ -14,12 +14,12 @@
     <div class="ui container">
         <div class="ui inverted menu secondary stackable">
             <h2 class="ui item teal header">Blog</h2>
-            <a href="#" class="item"><i class="icon home"></i>首页</a>
-            <a href="#" class="item"><i class="idea icon"></i>分类</a>
-            <a href="#" class="item"><i class="tags icon"></i>标签</a>
-            <a href="#" class="item"><i class="info icon"></i>归档</a>
-            <a href="#" class="item"><i class="user icon"></i>关于我</a>
-            <div class="right item">
+            <a href="#" class="m-item item m-mobile-hidden"><i class="icon home"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class="info icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class="user icon"></i>关于我</a>
+            <div class="m-item right item m-mobile-hidden">
                 <div class="ui icon transparent inverted input">
                     <input type="text" placeholder="Search...">
                     <i class="search link icon"></i>
@@ -27,6 +27,9 @@
             </div>
         </div>
     </div>
+    <a href="#" class="ui black icon button m-top-right m-mobile-show menu toggle">
+        <i class="sidebar icon"></i>
+    </a>
 </nav>
 
 <!--中间内容-->
@@ -393,7 +396,7 @@
 <!--底部-->
 <footer class="ui vertical inverted segment m-padded-tb-massive">
     <div class="ui center aligned container">
-        <div class="ui inverted divided grid">
+        <div class="ui inverted divided stackable grid">
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
@@ -429,5 +432,10 @@
 
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="static/js/semantic.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hidden');
+    });
+</script>
 </body>
 </html>
